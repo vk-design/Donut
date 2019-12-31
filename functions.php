@@ -1056,8 +1056,7 @@ function timeago( $ptime ) {
         }
     };
 }
-// 静态资源使用七牛 CDN
-function Qiniu_cdn(){ob_start( 'Qiniu_cdn_replace' );}
+/*function Qiniu_cdn(){ob_start( 'Qiniu_cdn_replace' );}
 add_action( 'template_redirect', 'Qiniu_cdn' );
 // 替换静态资源链接为七牛 CDN
 function Qiniu_cdn_replace( $code ){
@@ -1065,7 +1064,7 @@ function Qiniu_cdn_replace( $code ){
 	$cdn_dirs = str_replace( '-', '\-', 'wp-content|wp-includes' );
 	$regex = '/' . str_replace( '/', '\/', site_url() ) . '\/((' . $cdn_dirs . ')\/[^\s\?\\\'\"\;\>\<]{1,}.(' . $cdn_exts . '))([\"\\\'\s\?]{1})/';
 	return preg_replace( $regex, '//cdn.imsou.cn/$1$4', $code );
-}
+}*/
 /*搜索增强*/
 if(is_search()){
 add_filter('posts_orderby_request', 'search_orderby_filter');
